@@ -1,0 +1,6 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+ /*Hide the close button from tabs*/
+.tab-close-button {
+  display: none !important;
+}
