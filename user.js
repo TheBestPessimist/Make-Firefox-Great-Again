@@ -1,5 +1,3 @@
- // https://support.mozilla.org/en-US/questions/1247072
-
 
 user_pref("browser.gesture.pinch.threshold", 450);
 user_pref("browser.tabs.closeTabByDblclick", true);
