@@ -1,6 +1,22 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
  /*Hide the close button from tabs*/
 .tab-close-button {
   display: none !important;
+}
+
+
+
+
+
+/**
+ * Make the search results pop-up centred under the search bar and have same length
+ */
+#urlbar-results
+{
+    -moz-window-shadow: none !important;
+    margin-top: 0 !important;
+    border: 0 !important;
+    margin-left: 0 !important; /*moves the urlbar to the center*/
+
+    --search-bar-length: calc(100vw - var(--item-padding-start) - var(--item-padding-end) + 9px);
+    max-width: var(--search-bar-length);
 }
