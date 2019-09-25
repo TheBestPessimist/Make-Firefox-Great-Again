@@ -1,0 +1,20 @@
+/*
+
+Source: https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/tabs_fill_available_width.css
+
+*/
+
+
+
+/*
+Here's why [fadein] is required: "When you close a tab, the fadein attribute is removed, but collapsed is not always set for some reason, and in that case, this rule makes it invisible:";
+
+Ref.: http://forums.mozillazine.org/viewtopic.php?f=38&t=3052615;
+
+
+
+!!! Someone please explain to me what the [fadein] selector does in this case, and why is firefox bugged? !!!
+*/
+.tabbrowser-tab[fadein] {
+    max-width: 40vw !important;
+}

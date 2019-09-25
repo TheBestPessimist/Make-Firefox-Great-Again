@@ -1,3 +1,6 @@
+ @import url("modules/tabs-fill-available-width.css");
+
+
  /*Hide the close button from tabs*/
 .tab-close-button {
   display: none !important;
