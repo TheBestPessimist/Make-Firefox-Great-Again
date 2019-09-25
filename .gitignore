@@ -1,7 +1,10 @@
 # Ignore everything
 *
 
+# But descend into directories
+!*/
+
 # Except for
 !.gitignore
 !user.js
-!chrome/*
+!chrome/**
