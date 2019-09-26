@@ -1,25 +1,147 @@
- @import url("modules/tabs-fill-available-width.css");
+@import url("modules/tabs-fill-available-width.css");
 
 
- /*Hide the close button from tabs*/
+/* Hide the close button from tabs */
 .tab-close-button {
-  display: none !important;
+    display: none !important;
 }
 
 
 
 
 
-/**
- * Make the search results pop-up centred under the search bar and have same length
- */
+
+/*
+
+!**
+
+Make the search results pop-up centred under the search bar and have same length.
+
+For this to work, a flexible space must be added ONLY IN THE FRONT of the searchbar. The one behind the searchbar has to be removed.
+
+*!
 #urlbar-results
 {
     -moz-window-shadow: none !important;
     margin-top: 0 !important;
-    border: 0 !important;
-    margin-left: 0 !important; /*moves the urlbar to the center*/
 
-    --search-bar-length: calc(100vw - var(--item-padding-start) - var(--item-padding-end) + 9px);
-    max-width: var(--search-bar-length);
+
+    !* moves the urlbar to the center *!
+    margin-left: 0 !important;
+
+
+    !* set the correct width *!
+    max-width: calc(100vw - var(--item-padding-start) - var(--item-padding-end) + 9px) !important;
+}
+
+
+
+!* this makes the flexible space smaller *!
+toolbarspring {
+    -moz-box-flex: 1 !important;
+    min-width: 20px !important;
+}
+
+!*  results are left aligned  *!
+.urlbarView-row {
+    padding-left: 0 !important;
+}
+*/
+
+
+/*------------------------------*/
+/*------------------------------*/
+
+/*midwork*/
+
+
+
+
+#urlbar-results
+{
+
+    --padding-start: calc(var(--item-padding-start) - 11px) !important;
+    --padding-end: calc(var(--item-padding-end) - 10px) !important;
+
+}
+
+.urlbarView-body-inner,
+.search-panel-one-offs-header,
+.search-panel-one-offs
+{
+    margin: 0 !important;
+
+    background: var(--arrowpanel-background) !important;
+
+    color: inherit !important;
+    border-radius: 0 !important;
+
+
+}
+
+
+.search-one-offs,
+.search-panel-one-offs
+{
+    display: none;
+}
+
+
+
+
+.urlbarView-row
+{
+    padding: 0 16px !important;
+    height: 32px !important;
+    border-radius: 0 !important;
+}
+
+.urlbarView-row-inner
+{
+    height: 100% !important;
+    align-items: center !important;
+}
+
+.urlbarView-favicon
+{
+    margin-inline-end: 16px !important;
+}
+
+.urlbarView-title-separator
+{
+    flex: 1 !important;
+}
+
+.urlbarView-title-separator::before
+{
+    display: none !important;
+}
+
+.urlbarView-type-icon
+{
+    order: 1 !important;
+    margin-inline-start: 16px !important;
+    margin-inline-end: 0 !important;
+}
+
+.search-panel-one-offs
+{
+    padding: 4px !important;
+}
+
+.searchbar-engine-one-off-item
+{
+    min-width: 32px !important;
+    max-width: 32px !important;
+    height: 32px !important;
+    border-radius: 16px !important;
+    margin: 4px !important;
+    background-image: none !important;
+    color: inherit !important;
+    border: 0 !important;
+}
+
+.searchbar-engine-one-off-item.dummy
+{
+    display: none !important;
 }
