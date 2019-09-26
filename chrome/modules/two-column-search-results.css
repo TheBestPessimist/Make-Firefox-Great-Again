@@ -1,0 +1,78 @@
+/*
+    Make the search bar result more vivaldi-like:
+    - better highlighting/contrast
+    - all titles and urls are aligned in 2 columns: 50% - 50% over the whole browser length
+*/
+
+/* hide the bottom "search with google/duckduckgo/otherBrowser */
+.search-one-offs,
+.search-panel-one-offs
+{
+    display: none;
+}
+
+/* search results main div */
+.urlbarView-row
+{
+    padding: 0 16px !important;
+    height: 32px !important;
+    border-radius: 0 !important;
+}
+
+/* flex container */
+.urlbarView-row-inner
+{
+    height: 100% !important;
+    align-items: center !important;
+}
+
+/* position 0: type if the result: bookmark, tab, etc. */
+.urlbarView-type-icon
+{
+    margin-inline-end: 16px !important;
+}
+
+/* position 1: favicon = website icon */
+.urlbarView-favicon
+{
+    margin-inline-end: 10px !important;
+}
+
+/* position 2: result title, which occupies 50% of the row */
+.urlbarView-title {
+    width: 50% !important;
+    margin-right: 10px;
+}
+
+/* that "--" separator betweent title and address */
+.urlbarView-title-separator
+{
+    display: none !important;
+}
+
+
+/*
+    color and font modifications
+*/
+
+/* better highlight the matched text  */
+.urlbarView-title strong,
+.urlbarView-secondary strong {
+    font-size: 1.1em !important;
+    padding: 0 0.5px !important;
+    color: #04e5d3 !important;
+}
+
+/* makes the text white, font default, to have a better contrast with the matched text */
+.urlbarView-title,
+.urlbarView-secondary {
+    color: inherit !important;
+    font-size: unset !important;
+}
+
+/* disable the fade-out of the url and title, and show the ellipsis instead */
+.urlbarView-title,
+.urlbarView-secondary {
+    text-overflow: ellipsis !important;
+    mask-image: none !important;
+}
